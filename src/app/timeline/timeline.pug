@@ -1,0 +1,20 @@
+.w-100.overflow-scroll(fill-component-parent-view, [before-scroll-end]='beforeScrollEnd')
+  .container
+    .row
+      .col-md-12
+        .main-timeline
+          .p-3.w-100
+          a.timeline.w-100(*ngFor="let each of data.items")
+            .timeline-icon
+              i.fa([ngClass]="appConfig.categoryIconMap[each.category]" )
+            .timeline-content
+              .card.bg-light.p-2.timeline-content-box
+                .col-xs-12.d-flex
+                  .title.text-truncate.flex-fill(data-toggle="tooltip", title="{{each.title}}") {{each.title}}
+                  img.rounded-circle.profile-icon(src='{{each.user.photo}}', role="button", data-toggle="tooltip", data-placement="top", title="{{each.user.name}}")
+                p.description {{each.description}}
+                .col-xs-12
+                  .time.float-end.text-secondary(style='font-size: 10px;') {{ each.eventTime?.iso | date : 'MMM d, y, h:mm:ss a' }}
+        .refresh-icon(*ngIf="ui.loading")
+          i.fa.fa-spin.fa-spinner
+

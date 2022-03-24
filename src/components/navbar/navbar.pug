@@ -1,0 +1,30 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  a.navbar-brand.ms-2(href='#') Timeline
+  button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse.justify-content-between
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        .nav-link((click)='openCreatePost()', role='button') Create Post
+      //li.nav-item
+        a.nav-link(href='#') Link
+      //li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | Dropdown
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='#') Action
+          a.dropdown-item(href='#') Another action
+          .dropdown-divider
+          a.dropdown-item(href='#') Something else here
+      //li.nav-item
+        a.nav-link.disabled(href='#') Disabled
+    ul.navbar-nav
+      li.nav-item.dropdown.me-2
+        a#profileDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          i.fa.fa-user
+        .dropdown-menu.dropdown-menu-end(aria-labelledby='profileDropdown')
+          //a.dropdown-item(href='#') Action
+          //a.dropdown-item(href='#') Another action
+          //.dropdown-divider
+          button.dropdown-item((click)='logout()') Logout
+create-post(*ngIf="ui.modal.createPost", (close)='ui.modal.createPost = !ui.modal.createPost')
