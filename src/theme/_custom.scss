@@ -1,0 +1,6 @@
+body {position: absolute;height: 100%;width: 100%}
+.flex-box {display: flex;flex-flow: column;height: 100%;}
+.flex-heading {width: 100%;flex: 0 1 auto;}
+.flex-content {width: 100%;flex: 1 1 auto;overflow-y: auto;overflow-x: hidden;}
+.flex-footer {width: 100%;flex: 0 1 0;}
+.bg-modal{background: #000000AA}
