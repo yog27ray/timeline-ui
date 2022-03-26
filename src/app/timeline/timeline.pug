@@ -14,7 +14,8 @@
                   img.rounded-circle.profile-icon(src='{{each.user.photo}}', role="button", data-toggle="tooltip", data-placement="top", title="{{each.user.name}}")
                 p.description {{each.description}}
                 .col-xs-12
-                  .time.float-end.text-secondary(style='font-size: 10px;') {{ each.eventTime?.iso | date : 'MMM d, y, h:mm:ss a' }}
+                  a.link-primary(*ngIf="each.link", href='{{each.link}}', target='_blank') Read More...
+                  .time.float-end.text-secondary.end-0.m-1.position-absolute.bottom-0(style='font-size: 10px;') {{ each.eventTime?.iso | date : 'MMM d, y, h:mm:ss a' }}
         .refresh-icon(*ngIf="ui.loading")
           i.fa.fa-spin.fa-spinner
 

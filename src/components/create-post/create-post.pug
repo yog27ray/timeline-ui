@@ -16,5 +16,8 @@
           .col-12
             label.form-label(for='description') Description
             textarea.form-control#description([(ngModel)]='post.description', required, name='description')
+          .col-12
+            label.form-label(for='link') Link
+            input.form-control#link([(ngModel)]='post.link', name='link')
         .modal-footer.border-0
           button.btn.btn-success.btn-sm([disabled]="!createPostForm.valid", (click)='createPost()') Create
