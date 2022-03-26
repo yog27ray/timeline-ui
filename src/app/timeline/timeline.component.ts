@@ -16,6 +16,7 @@ export class TimelineComponent implements OnInit, OnDestroy {
       category: string;
       title: string;
       description: string;
+      link: string;
       eventTime: { iso: string };
       user: { photo: string; name: string; };
     }>;
