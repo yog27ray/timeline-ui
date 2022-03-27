@@ -17,6 +17,9 @@
             label.form-label(for='description') Description
             textarea.form-control#description([(ngModel)]='post.description', required, name='description')
           .col-12
+            label.form-label(for='eventTime') Event Time
+            input.form-control#eventTime([(ngModel)]='post.eventTime', name='eventTime', type='datetime-local')
+          .col-12
             label.form-label(for='link') Link
             input.form-control#link([(ngModel)]='post.link', name='link')
         .modal-footer.border-0
