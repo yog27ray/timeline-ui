@@ -61,6 +61,10 @@
   .main-timeline .timeline:nth-child(even) .timeline-content{float:right}
   .main-timeline .timeline-content-box:before,.main-timeline .timeline:nth-child(even) .timeline-content-box:before{width:50%;left:120px}
   .main-timeline .timeline:nth-child(even) .timeline-content-box:before{right:auto;transform:rotateY(0)}
+  .main-timeline .timeline:nth-child(even) .timeline-content-box{border-right: none;border-left: 3px solid #ec496e}
+  .main-timeline .timeline:nth-child(2n) .timeline-content-box{border-left-color:#f9850f;}
+  .main-timeline .timeline:nth-child(3n) .timeline-content-box{border-left-color:#8fb800;border-right-color:#8fb800;}
+  .main-timeline .timeline:nth-child(4n) .timeline-content-box{border-left-color:#2fcea5;border-bottom-color:#2fcea5}
   .main-timeline .timeline-content:after,.main-timeline .timeline:nth-child(even) .timeline-content:after{left:85px}
   .main-timeline .timeline-content:after{top: 13px}
 }
